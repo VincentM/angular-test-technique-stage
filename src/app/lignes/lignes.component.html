@@ -1,0 +1,22 @@
+<h2>Mes lignes</h2>
+<ul class="lignes">
+  <li *ngFor="let ligne of lignes" [class.selected]="ligne === selectedLigne" (click)="onSelect(ligne)">
+    {{ligne.code}} {{ligne.name}} <span class="badge">{{ligne.id}}</span>
+  </li>
+</ul>
+
+<div *ngIf="ligne">
+	<h2>{{ ligne.name | uppercase }} Details</h2>
+    <div><span>code: </span>{{ligne.name}}</div>
+<div><span>directions: </span>{{ligne.directions}}</div>
+<div><span>id: </span>{{ligne.id}}</div>
+
+</div>
+
+<app-stations></app-stations>
+<app-destinations></app-destinations>
+<app-horaires></app-horaires>
+<app-trafics></app-trafics>
+<app-messages></app-messages>
+
+

@@ -1,0 +1,15 @@
+<h2>Mes Destinations</h2>
+<ul class="destinations">
+  <li *ngFor="let destination of destinations" [class.selected]="destination === destination" (click)="onSelect(destination)">
+    {{destination.name}}<span class="badge">{{destination.way}}</span>
+  </li>
+</ul>
+
+
+<div *ngIf="selectedDestination">
+	<h2>{{ selectedDestination.name | uppercase }} Details</h2>
+    <div><span>name: </span>{{selectedDestination.name}}</div>
+	<div><span>way: </span>{{selectedDestination.way}}</div>
+
+</div>
+

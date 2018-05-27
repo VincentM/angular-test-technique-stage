@@ -1,0 +1,16 @@
+<h2>Mes Horaires</h2>
+<ul class="horaires">
+  <li *ngFor="let horaire of horaires" [class.selected]="horaire === selectedHoraire" (click)="onSelect(horaire)">
+    <span class="badge">{{horaire.message}}</span> {{horaire.destination}}   </li>
+</ul>
+
+
+<div *ngIf="selectedHoraire">
+	<h2>Horaire Details</h2>
+    <div><span>message: </span>{{selectedHoraire.message}}</div>
+<div><span>destination: </span>{{selectedHoraire.destination}}</div>
+
+</div>
+
+
+

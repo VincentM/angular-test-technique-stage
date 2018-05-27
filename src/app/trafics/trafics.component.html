@@ -1,0 +1,17 @@
+<h2>Mes Trafics</h2>
+<ul class="trafics">
+  <li *ngFor="let trafic of trafics" [class.selected]="trafic === selectedTrafic" (click)="onSelect(trafic)">
+    <span class="badge">{{trafic.line}}</span> {{trafic.title}}
+  </li>
+</ul>
+
+
+<div *ngIf="selectedLigne">
+	<h2>Trafic Details</h2>
+    <div><span>line: </span>{{selectedTrafic.line}}</div>
+<div><span>slug: </span>{{selectedTrafic.slug}}</div>
+<div><span>title: </span>{{selectedTrafic.title}}</div>
+<div><span>message: </span>{{selectedTrafic.message}}</div>
+
+</div>
+
