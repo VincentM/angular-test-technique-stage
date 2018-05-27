@@ -27,7 +27,10 @@ export class LignesComponent implements OnInit {
   this.selectedLigne = ligne;
   }
   getLignes(): void {
-  this.ligneService.getLignes().subscribe(lignes=>this.lignes=lignes);
+  this.ligneService.getLignes().subscribe(lignes=>{
+    console.log(lignes);
+    this.lignes=lignes
+    });
   }
 
 
