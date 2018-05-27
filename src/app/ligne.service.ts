@@ -14,16 +14,16 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class LigneService {
 
-  constructor(/**private http: HttpClient,*/ private messageService: MessageService) { }
+  constructor(private http: HttpClient, private messageService: MessageService) { }
 
-  getLignes(): Observable<Ligne[]> {
+  /**getLignes(): Observable<Ligne[]> {
   this.messageService.add('LigneService: fetched lignes');
   return of (LIGNES);
-  }
+  }*/
 
 
-  /**getLignes (): Observable {
+  getLignes (): Observable<any> {
   return this.http.get("https://api-ratp.pierre-grimaud.fr/v3/lines/metros")
-}*/
+}
 
 }
