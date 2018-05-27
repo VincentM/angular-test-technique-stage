@@ -13,6 +13,8 @@ import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { GererMesStationsComponent } from './gerer-mes-stations/gerer-mes-stations.component';
 
+import{ HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -29,6 +31,7 @@ import { GererMesStationsComponent } from './gerer-mes-stations/gerer-mes-statio
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [],
