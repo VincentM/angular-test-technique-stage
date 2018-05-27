@@ -11,7 +11,7 @@ import { LigneService } from '../ligne.service';
 })
 export class LignesComponent implements OnInit {
 
-   
+
 
   lignes :Ligne[];
   selectedLigne: Ligne;
@@ -24,12 +24,11 @@ export class LignesComponent implements OnInit {
   }
 
   onSelect(ligne: Ligne): void {
-  this.selectedLigne = ligne;
+    this.selectedLigne = ligne;
   }
   getLignes(): void {
-  this.ligneService.getLignes().subscribe(lignes=>{
-    console.log(lignes);
-    this.lignes=lignes
+    this.ligneService.getLignes().subscribe(lignes=>{
+    this.lignes=lignes.result.metros;
     });
   }
 
